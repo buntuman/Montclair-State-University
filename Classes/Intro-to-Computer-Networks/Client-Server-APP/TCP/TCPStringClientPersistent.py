@@ -10,7 +10,6 @@ while True:
     if(sentence.lower() == 'quit'):
         break
     else:
-        print("Reciveing shit from server")
         modifiedSentence = clientSocket.recv(1024)
         print(modifiedSentence.decode())
 clientSocket.close()
