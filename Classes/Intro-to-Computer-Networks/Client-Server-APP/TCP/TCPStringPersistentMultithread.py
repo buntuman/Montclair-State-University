@@ -3,7 +3,11 @@
 from socket import *
 import threading
 
-
+'''
+    This is accepts a socket connection(Socket) and clientID(Integer) as its arguments.
+    The function then continiously accepts the specified clients messages until 'quit' is received.
+    All received messages are converted to uppercase and sent back to the sender. 
+'''
 def serveClient(tcpConnectionSock,clientCount):
     print("Serving Client %d "%(clientCount))
     while True:
@@ -16,6 +20,11 @@ def serveClient(tcpConnectionSock,clientCount):
     print(" Client %d  Requested quit. Bye client %d :) "%(clientCount,clientCount))
 
 
+'''
+    The 'ServerThread' class describes the characteristic of a ServerThread Object.
+    A ServerThread object can be instanciated by providing a socket connection object and ClientID number to the constructor.
+    The ServerThread extends the threaing class which gives multi-threading functionality to the ServerThread object.
+'''
 class ServerThread(threading.Thread):
     def __init__(self,tcpConnectionSocket,clientNum):
         self.tcpConnectionSocket = tcpConnectionSocket
