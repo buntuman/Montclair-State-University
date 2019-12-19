@@ -21,3 +21,4 @@ while True: # Infinite loop that accepts clients connections. Can only be termin
             capitalizedSentence = sentence.upper()
             connectionSocket.send(capitalizedSentence.encode())
     print("Clieent %d Requested server to quit. Bye Client %d"%(clientCount,clientCount))
+d
