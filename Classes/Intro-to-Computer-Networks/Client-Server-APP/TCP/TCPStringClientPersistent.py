@@ -5,7 +5,7 @@ serverPort = 5000
 clientSocket = socket(AF_INET, SOCK_STREAM)
 clientSocket.connect((serverName, serverPort))
 while True:
-    sentence = input("Input a lowercase sentence: ")
+    sentence = input("Enter Math Expression : ")
     clientSocket.send(sentence.encode())
     if(sentence.lower() == 'quit'):
         break

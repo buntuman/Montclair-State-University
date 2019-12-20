@@ -18,7 +18,5 @@ while True: # Infinite loop that accepts clients connections. Can only be termin
         if(sentence.lower() == 'quit'):
             break
         else:
-            capitalizedSentence = sentence.upper()
-            connectionSocket.send(capitalizedSentence.encode())
+            connectionSocket.send(str(eval(sentence)).encode())
     print("Clieent %d Requested server to quit. Bye Client %d"%(clientCount,clientCount))
-d

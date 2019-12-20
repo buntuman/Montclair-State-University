@@ -15,8 +15,7 @@ def serveClient(tcpConnectionSock,clientCount):
         if(sentence.lower() == 'quit'):
             break
         else:
-            capitalizedSentence = sentence.upper()
-            tcpConnectionSock.send(capitalizedSentence.encode())
+            tcpConnectionSock.send(str(eval(sentence)).encode())
     print(" Client %d  Requested quit. Bye client %d :) "%(clientCount,clientCount))
 
 
